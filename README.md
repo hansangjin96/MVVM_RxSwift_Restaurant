@@ -15,3 +15,12 @@
 - 셀에서 앨범 이미지, 가수 이름, 노래 제목을 보여주기
 - 디테일 뷰 구성은 자유롭게
 - (선택) 1분 미리 듣기 추가 (AVFoundation, AVKit)
+
+### **Requirements**
+
+- Xcode 12.x
+- Swift 5.x
+
+### **SPM**
+
+- RxSwift
