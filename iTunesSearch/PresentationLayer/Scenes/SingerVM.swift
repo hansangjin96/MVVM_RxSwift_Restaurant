@@ -10,7 +10,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-final class MainVM: ViewModelType {
+final class SingerVM: ViewModelType {
     struct Input {
         let viewWillAppear: Driver<Void>
     }
@@ -31,11 +31,13 @@ final class MainVM: ViewModelType {
                 guard let self = self else { return Driver.empty() }
                 
                 return self.provider.networkService.fetchRestaurant()
-                    .asDriver { error -> Driver<[Restaurant]> in
-                        return Driver.empty()
-                    }
+                    .asDriver(onErrorJustReturn: [])
             }
         
         return Output(restaurants: restaurants)
+    }
+    
+    func fetchItunesResult() {
+        
     }
 }

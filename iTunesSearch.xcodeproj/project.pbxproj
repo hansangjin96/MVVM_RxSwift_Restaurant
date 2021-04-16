@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400215042629A8D90048021B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400215032629A8D90048021B /* Logger.swift */; };
+		4002151E2629D8970048021B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4002151D2629D8970048021B /* NetworkManager.swift */; };
 		40269794262723CA003966B9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40269793262723CA003966B9 /* AppCoordinator.swift */; };
 		40269799262723E2003966B9 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40269798262723E2003966B9 /* CoordinatorType.swift */; };
 		402697A1262725F0003966B9 /* members.json in Resources */ = {isa = PBXBuildFile; fileRef = 402697A0262725F0003966B9 /* members.json */; };
-		402697A726272803003966B9 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402697A626272803003966B9 /* MainVM.swift */; };
+		402697A726272803003966B9 /* SingerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402697A626272803003966B9 /* SingerVM.swift */; };
 		402697B026272926003966B9 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402697AF26272926003966B9 /* ViewModelType.swift */; };
 		402697B6262729FE003966B9 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402697B5262729FE003966B9 /* AppContainer.swift */; };
 		402697BB26272A0F003966B9 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402697BA26272A0F003966B9 /* ServiceProvider.swift */; };
@@ -18,7 +20,7 @@
 		402697CC26273716003966B9 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402697CB26273716003966B9 /* Restaurant.swift */; };
 		40CB77FE262675BE0053F258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB77FD262675BE0053F258 /* AppDelegate.swift */; };
 		40CB7800262675BE0053F258 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB77FF262675BE0053F258 /* SceneDelegate.swift */; };
-		40CB7802262675BE0053F258 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB7801262675BE0053F258 /* MainVC.swift */; };
+		40CB7802262675BE0053F258 /* SingerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB7801262675BE0053F258 /* SingerVC.swift */; };
 		40CB7805262675BE0053F258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40CB7803262675BE0053F258 /* Main.storyboard */; };
 		40CB7807262675C10053F258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40CB7806262675C10053F258 /* Assets.xcassets */; };
 		40CB780A262675C10053F258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40CB7808262675C10053F258 /* LaunchScreen.storyboard */; };
@@ -29,6 +31,14 @@
 		40CB7836262676620053F258 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 40CB7835262676620053F258 /* RxRelay */; };
 		40CB7838262676620053F258 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 40CB7837262676620053F258 /* RxCocoa */; };
 		40CB783A262676620053F258 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 40CB7839262676620053F258 /* RxBlocking */; };
+		40DDC78E2629A82700597480 /* Cell+ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DDC78D2629A82700597480 /* Cell+ReuseIdentifiable.swift */; };
+		40DDC7942629A82E00597480 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DDC7922629A82E00597480 /* String+localized.swift */; };
+		40DDC7952629A82E00597480 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DDC7932629A82E00597480 /* Optional+Extension.swift */; };
+		40DDC79C2629A83A00597480 /* Observable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DDC7992629A83900597480 /* Observable+Extensions.swift */; };
+		40DDC79D2629A83A00597480 /* UIImageView+isNotHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DDC79A2629A83900597480 /* UIImageView+isNotHidden.swift */; };
+		40DDC79E2629A83A00597480 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DDC79B2629A83A00597480 /* UIViewController+Rx.swift */; };
+		40E0D3902629A249000E76FC /* SingerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D38E2629A249000E76FC /* SingerCell.swift */; };
+		40E0D3912629A249000E76FC /* SingerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E0D38F2629A249000E76FC /* SingerCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,29 +59,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		400215032629A8D90048021B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		4002151D2629D8970048021B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		40269793262723CA003966B9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		40269798262723E2003966B9 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		402697A0262725F0003966B9 /* members.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = members.json; sourceTree = "<group>"; };
-		402697A626272803003966B9 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		402697A626272803003966B9 /* SingerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerVM.swift; sourceTree = "<group>"; };
 		402697AF26272926003966B9 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		402697B5262729FE003966B9 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		402697BA26272A0F003966B9 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		402697C226273586003966B9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		402697CB26273716003966B9 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		40CB77FA262675BE0053F258 /* MVVM_RxSwift_Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_RxSwift_Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40CB77FA262675BE0053F258 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40CB77FD262675BE0053F258 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40CB77FF262675BE0053F258 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		40CB7801262675BE0053F258 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		40CB7801262675BE0053F258 /* SingerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerVC.swift; sourceTree = "<group>"; };
 		40CB7804262675BE0053F258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		40CB7806262675C10053F258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40CB7809262675C10053F258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40CB780B262675C10053F258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40CB7810262675C10053F258 /* MVVM_RxSwift_RestaurantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVM_RxSwift_RestaurantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40CB7810262675C10053F258 /* iTunesSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40CB7814262675C10053F258 /* MVVM_RxSwift_RestaurantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_RxSwift_RestaurantTests.swift; sourceTree = "<group>"; };
 		40CB7816262675C10053F258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40CB781B262675C10053F258 /* MVVM_RxSwift_RestaurantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVM_RxSwift_RestaurantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40CB781B262675C10053F258 /* iTunesSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40CB781F262675C10053F258 /* MVVM_RxSwift_RestaurantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_RxSwift_RestaurantUITests.swift; sourceTree = "<group>"; };
 		40CB7821262675C10053F258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40DDC78D2629A82700597480 /* Cell+ReuseIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cell+ReuseIdentifiable.swift"; sourceTree = "<group>"; };
+		40DDC7922629A82E00597480 /* String+localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
+		40DDC7932629A82E00597480 /* Optional+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
+		40DDC7992629A83900597480 /* Observable+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Extensions.swift"; sourceTree = "<group>"; };
+		40DDC79A2629A83900597480 /* UIImageView+isNotHidden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+isNotHidden.swift"; sourceTree = "<group>"; };
+		40DDC79B2629A83A00597480 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		40E0D38E2629A249000E76FC /* SingerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerCell.swift; sourceTree = "<group>"; };
+		40E0D38F2629A249000E76FC /* SingerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingerCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +124,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		400215172629D7CF0048021B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4002151D2629D8970048021B /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		400215182629D80C0048021B /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				40CB77FD262675BE0053F258 /* AppDelegate.swift */,
+				40CB77FF262675BE0053F258 /* SceneDelegate.swift */,
+				402697B5262729FE003966B9 /* AppContainer.swift */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		400215192629D8340048021B /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				40269792262723BD003966B9 /* Coordinator */,
+				402697A5262727EC003966B9 /* Scenes */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		4002151B2629D8480048021B /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				4002151C2629D8670048021B /* Utility */,
+				400215172629D7CF0048021B /* Network */,
+				40CB783F262676DD0053F258 /* Resources */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		4002151C2629D8670048021B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				400215032629A8D90048021B /* Logger.swift */,
+				40DDC78C2629A81700597480 /* Extension */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		400215222629D8C10048021B /* BusinessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				400215272629D9F40048021B /* Enum */,
+				400215262629D9E80048021B /* Protocol */,
+				402697B4262729D8003966B9 /* ServiceProvider */,
+				402697CA26273700003966B9 /* Model */,
+			);
+			path = BusinessLayer;
+			sourceTree = "<group>";
+		};
+		400215262629D9E80048021B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				40269798262723E2003966B9 /* CoordinatorType.swift */,
+				402697AF26272926003966B9 /* ViewModelType.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		400215272629D9F40048021B /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		40269792262723BD003966B9 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,20 +208,13 @@
 		402697A5262727EC003966B9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				40CB7801262675BE0053F258 /* MainVC.swift */,
-				402697A626272803003966B9 /* MainVM.swift */,
+				40CB7803262675BE0053F258 /* Main.storyboard */,
+				40E0D38F2629A249000E76FC /* SingerCell.xib */,
+				40CB7801262675BE0053F258 /* SingerVC.swift */,
+				402697A626272803003966B9 /* SingerVM.swift */,
+				40E0D38E2629A249000E76FC /* SingerCell.swift */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		402697AE262728F8003966B9 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				402697B5262729FE003966B9 /* AppContainer.swift */,
-				40269798262723E2003966B9 /* CoordinatorType.swift */,
-				402697AF26272926003966B9 /* ViewModelType.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		402697B4262729D8003966B9 /* ServiceProvider */ = {
@@ -161,9 +247,9 @@
 		40CB77FB262675BE0053F258 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				40CB77FA262675BE0053F258 /* MVVM_RxSwift_Restaurant.app */,
-				40CB7810262675C10053F258 /* MVVM_RxSwift_RestaurantTests.xctest */,
-				40CB781B262675C10053F258 /* MVVM_RxSwift_RestaurantUITests.xctest */,
+				40CB77FA262675BE0053F258 /* iTunesSearch.app */,
+				40CB7810262675C10053F258 /* iTunesSearchTests.xctest */,
+				40CB781B262675C10053F258 /* iTunesSearchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,11 +257,14 @@
 		40CB77FC262675BE0053F258 /* MVVM_RxSwift_Restaurant */ = {
 			isa = PBXGroup;
 			children = (
-				40CB783E262676D80053F258 /* Sources */,
-				40CB783F262676DD0053F258 /* Resources */,
+				400215182629D80C0048021B /* ApplicationLayer */,
+				400215222629D8C10048021B /* BusinessLayer */,
+				4002151B2629D8480048021B /* CoreLayer */,
+				400215192629D8340048021B /* PresentationLayer */,
 				40CB7840262676E30053F258 /* Support */,
 			);
-			path = MVVM_RxSwift_Restaurant;
+			name = MVVM_RxSwift_Restaurant;
+			path = iTunesSearch;
 			sourceTree = "<group>";
 		};
 		40CB7813262675C10053F258 /* MVVM_RxSwift_RestaurantTests */ = {
@@ -184,7 +273,8 @@
 				40CB7814262675C10053F258 /* MVVM_RxSwift_RestaurantTests.swift */,
 				40CB7816262675C10053F258 /* Info.plist */,
 			);
-			path = MVVM_RxSwift_RestaurantTests;
+			name = MVVM_RxSwift_RestaurantTests;
+			path = iTunesSearchTests;
 			sourceTree = "<group>";
 		};
 		40CB781E262675C10053F258 /* MVVM_RxSwift_RestaurantUITests */ = {
@@ -193,21 +283,8 @@
 				40CB781F262675C10053F258 /* MVVM_RxSwift_RestaurantUITests.swift */,
 				40CB7821262675C10053F258 /* Info.plist */,
 			);
-			path = MVVM_RxSwift_RestaurantUITests;
-			sourceTree = "<group>";
-		};
-		40CB783E262676D80053F258 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				402697CA26273700003966B9 /* Model */,
-				40CB7841262676FB0053F258 /* Application */,
-				402697B4262729D8003966B9 /* ServiceProvider */,
-				402697AE262728F8003966B9 /* Common */,
-				40269792262723BD003966B9 /* Coordinator */,
-				402697A5262727EC003966B9 /* Scenes */,
-				40CB7803262675BE0053F258 /* Main.storyboard */,
-			);
-			path = Sources;
+			name = MVVM_RxSwift_RestaurantUITests;
+			path = iTunesSearchUITests;
 			sourceTree = "<group>";
 		};
 		40CB783F262676DD0053F258 /* Resources */ = {
@@ -228,21 +305,49 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		40CB7841262676FB0053F258 /* Application */ = {
+		40DDC78C2629A81700597480 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				40CB77FD262675BE0053F258 /* AppDelegate.swift */,
-				40CB77FF262675BE0053F258 /* SceneDelegate.swift */,
+				40DDC7A72629A84600597480 /* Foundation */,
+				40DDC7A62629A84100597480 /* UIKit */,
+				40DDC7A22629A83B00597480 /* Rx */,
 			);
-			path = Application;
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		40DDC7A22629A83B00597480 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				40DDC7992629A83900597480 /* Observable+Extensions.swift */,
+				40DDC79A2629A83900597480 /* UIImageView+isNotHidden.swift */,
+				40DDC79B2629A83A00597480 /* UIViewController+Rx.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		40DDC7A62629A84100597480 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				40DDC78D2629A82700597480 /* Cell+ReuseIdentifiable.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		40DDC7A72629A84600597480 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				40DDC7932629A82E00597480 /* Optional+Extension.swift */,
+				40DDC7922629A82E00597480 /* String+localized.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		40CB77F9262675BE0053F258 /* MVVM_RxSwift_Restaurant */ = {
+		40CB77F9262675BE0053F258 /* iTunesSearch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40CB7824262675C10053F258 /* Build configuration list for PBXNativeTarget "MVVM_RxSwift_Restaurant" */;
+			buildConfigurationList = 40CB7824262675C10053F258 /* Build configuration list for PBXNativeTarget "iTunesSearch" */;
 			buildPhases = (
 				40CB77F6262675BE0053F258 /* Sources */,
 				40CB77F7262675BE0053F258 /* Frameworks */,
@@ -252,19 +357,19 @@
 			);
 			dependencies = (
 			);
-			name = MVVM_RxSwift_Restaurant;
+			name = iTunesSearch;
 			packageProductDependencies = (
 				40CB7831262676620053F258 /* RxSwift */,
 				40CB7835262676620053F258 /* RxRelay */,
 				40CB7837262676620053F258 /* RxCocoa */,
 			);
 			productName = MVVM_RxSwift_Restaurant;
-			productReference = 40CB77FA262675BE0053F258 /* MVVM_RxSwift_Restaurant.app */;
+			productReference = 40CB77FA262675BE0053F258 /* iTunesSearch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		40CB780F262675C10053F258 /* MVVM_RxSwift_RestaurantTests */ = {
+		40CB780F262675C10053F258 /* iTunesSearchTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40CB7827262675C10053F258 /* Build configuration list for PBXNativeTarget "MVVM_RxSwift_RestaurantTests" */;
+			buildConfigurationList = 40CB7827262675C10053F258 /* Build configuration list for PBXNativeTarget "iTunesSearchTests" */;
 			buildPhases = (
 				40CB780C262675C10053F258 /* Sources */,
 				40CB780D262675C10053F258 /* Frameworks */,
@@ -275,18 +380,18 @@
 			dependencies = (
 				40CB7812262675C10053F258 /* PBXTargetDependency */,
 			);
-			name = MVVM_RxSwift_RestaurantTests;
+			name = iTunesSearchTests;
 			packageProductDependencies = (
 				40CB7833262676620053F258 /* RxTest */,
 				40CB7839262676620053F258 /* RxBlocking */,
 			);
 			productName = MVVM_RxSwift_RestaurantTests;
-			productReference = 40CB7810262675C10053F258 /* MVVM_RxSwift_RestaurantTests.xctest */;
+			productReference = 40CB7810262675C10053F258 /* iTunesSearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		40CB781A262675C10053F258 /* MVVM_RxSwift_RestaurantUITests */ = {
+		40CB781A262675C10053F258 /* iTunesSearchUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40CB782A262675C10053F258 /* Build configuration list for PBXNativeTarget "MVVM_RxSwift_RestaurantUITests" */;
+			buildConfigurationList = 40CB782A262675C10053F258 /* Build configuration list for PBXNativeTarget "iTunesSearchUITests" */;
 			buildPhases = (
 				40CB7817262675C10053F258 /* Sources */,
 				40CB7818262675C10053F258 /* Frameworks */,
@@ -297,9 +402,9 @@
 			dependencies = (
 				40CB781D262675C10053F258 /* PBXTargetDependency */,
 			);
-			name = MVVM_RxSwift_RestaurantUITests;
+			name = iTunesSearchUITests;
 			productName = MVVM_RxSwift_RestaurantUITests;
-			productReference = 40CB781B262675C10053F258 /* MVVM_RxSwift_RestaurantUITests.xctest */;
+			productReference = 40CB781B262675C10053F258 /* iTunesSearchUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -324,7 +429,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 40CB77F5262675BE0053F258 /* Build configuration list for PBXProject "MVVM_RxSwift_Restaurant" */;
+			buildConfigurationList = 40CB77F5262675BE0053F258 /* Build configuration list for PBXProject "iTunesSearch" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -340,9 +445,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				40CB77F9262675BE0053F258 /* MVVM_RxSwift_Restaurant */,
-				40CB780F262675C10053F258 /* MVVM_RxSwift_RestaurantTests */,
-				40CB781A262675C10053F258 /* MVVM_RxSwift_RestaurantUITests */,
+				40CB77F9262675BE0053F258 /* iTunesSearch */,
+				40CB780F262675C10053F258 /* iTunesSearchTests */,
+				40CB781A262675C10053F258 /* iTunesSearchUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -356,6 +461,7 @@
 				40CB7807262675C10053F258 /* Assets.xcassets in Resources */,
 				40CB7805262675BE0053F258 /* Main.storyboard in Resources */,
 				402697A1262725F0003966B9 /* members.json in Resources */,
+				40E0D3912629A249000E76FC /* SingerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,15 +486,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				400215042629A8D90048021B /* Logger.swift in Sources */,
 				402697CC26273716003966B9 /* Restaurant.swift in Sources */,
 				402697C326273586003966B9 /* NetworkService.swift in Sources */,
 				40269794262723CA003966B9 /* AppCoordinator.swift in Sources */,
+				40E0D3902629A249000E76FC /* SingerCell.swift in Sources */,
+				40DDC79E2629A83A00597480 /* UIViewController+Rx.swift in Sources */,
 				402697B6262729FE003966B9 /* AppContainer.swift in Sources */,
-				402697A726272803003966B9 /* MainVM.swift in Sources */,
+				402697A726272803003966B9 /* SingerVM.swift in Sources */,
+				40DDC79C2629A83A00597480 /* Observable+Extensions.swift in Sources */,
 				402697BB26272A0F003966B9 /* ServiceProvider.swift in Sources */,
-				40CB7802262675BE0053F258 /* MainVC.swift in Sources */,
+				40DDC7952629A82E00597480 /* Optional+Extension.swift in Sources */,
+				40DDC79D2629A83A00597480 /* UIImageView+isNotHidden.swift in Sources */,
+				4002151E2629D8970048021B /* NetworkManager.swift in Sources */,
+				40CB7802262675BE0053F258 /* SingerVC.swift in Sources */,
+				40DDC7942629A82E00597480 /* String+localized.swift in Sources */,
 				40CB77FE262675BE0053F258 /* AppDelegate.swift in Sources */,
 				40CB7800262675BE0053F258 /* SceneDelegate.swift in Sources */,
+				40DDC78E2629A82700597480 /* Cell+ReuseIdentifiable.swift in Sources */,
 				40269799262723E2003966B9 /* CoordinatorType.swift in Sources */,
 				402697B026272926003966B9 /* ViewModelType.swift in Sources */,
 			);
@@ -415,12 +530,12 @@
 /* Begin PBXTargetDependency section */
 		40CB7812262675C10053F258 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 40CB77F9262675BE0053F258 /* MVVM_RxSwift_Restaurant */;
+			target = 40CB77F9262675BE0053F258 /* iTunesSearch */;
 			targetProxy = 40CB7811262675C10053F258 /* PBXContainerItemProxy */;
 		};
 		40CB781D262675C10053F258 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 40CB77F9262675BE0053F258 /* MVVM_RxSwift_Restaurant */;
+			target = 40CB77F9262675BE0053F258 /* iTunesSearch */;
 			targetProxy = 40CB781C262675C10053F258 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -568,12 +683,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P25P5JJVFC;
-				INFOPLIST_FILE = MVVM_RxSwift_Restaurant/Support/Info.plist;
+				INFOPLIST_FILE = iTunesSearch/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.havi.MVVM-RxSwift-Restaurant";
+				PRODUCT_BUNDLE_IDENTIFIER = com.havi.iTunesSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -587,12 +702,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P25P5JJVFC;
-				INFOPLIST_FILE = MVVM_RxSwift_Restaurant/Support/Info.plist;
+				INFOPLIST_FILE = iTunesSearch/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.havi.MVVM-RxSwift-Restaurant";
+				PRODUCT_BUNDLE_IDENTIFIER = com.havi.iTunesSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -617,7 +732,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM_RxSwift_Restaurant.app/MVVM_RxSwift_Restaurant";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunesSearch.app/iTunesSearch";
 			};
 			name = Debug;
 		};
@@ -639,7 +754,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM_RxSwift_Restaurant.app/MVVM_RxSwift_Restaurant";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunesSearch.app/iTunesSearch";
 			};
 			name = Release;
 		};
@@ -686,7 +801,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		40CB77F5262675BE0053F258 /* Build configuration list for PBXProject "MVVM_RxSwift_Restaurant" */ = {
+		40CB77F5262675BE0053F258 /* Build configuration list for PBXProject "iTunesSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40CB7822262675C10053F258 /* Debug */,
@@ -695,7 +810,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40CB7824262675C10053F258 /* Build configuration list for PBXNativeTarget "MVVM_RxSwift_Restaurant" */ = {
+		40CB7824262675C10053F258 /* Build configuration list for PBXNativeTarget "iTunesSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40CB7825262675C10053F258 /* Debug */,
@@ -704,7 +819,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40CB7827262675C10053F258 /* Build configuration list for PBXNativeTarget "MVVM_RxSwift_RestaurantTests" */ = {
+		40CB7827262675C10053F258 /* Build configuration list for PBXNativeTarget "iTunesSearchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40CB7828262675C10053F258 /* Debug */,
@@ -713,7 +828,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40CB782A262675C10053F258 /* Build configuration list for PBXNativeTarget "MVVM_RxSwift_RestaurantUITests" */ = {
+		40CB782A262675C10053F258 /* Build configuration list for PBXNativeTarget "iTunesSearchUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40CB782B262675C10053F258 /* Debug */,

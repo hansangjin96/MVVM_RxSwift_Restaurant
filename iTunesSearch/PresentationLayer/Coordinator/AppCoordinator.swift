@@ -15,13 +15,7 @@ final class AppCoordinator: CoordinatorType {
     }
     
     func start() {
-        let vm = AppContainer.shared.mainVM
-        let vc = AppContainer.shared.mainVC
-        vc.viewModel = vm
-        
-        let nav = UINavigationController(rootViewController: vc)
-        
-        window.rootViewController = nav
+        window.rootViewController = AppContainer.shared.singerNavi
         window.makeKeyAndVisible()
     }
 }

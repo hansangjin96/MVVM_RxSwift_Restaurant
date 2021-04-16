@@ -15,7 +15,6 @@ enum NetworkError: Error {
 }
 
 protocol NetworkServiceType {
-    
     func fetchRestaurant() -> Single<[Restaurant]>
 }
 

@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-final class MainVC: UIViewController {
+final class SingerVC: UIViewController {
     
     // MARK: UI Property
     
@@ -19,33 +19,43 @@ final class MainVC: UIViewController {
     // MARK: Property
     
     private var disposeBag: DisposeBag = .init()
-    var viewModel: MainVM!
+    var viewModel: SingerVM!
     
     // MARK: Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureTableView()
         bindViewModel()
+    }
+    
+    // MARK: Method
+    
+    private func configureTableView() {
+        let nib = UINib(nibName: SingerCell.reusableID, bundle: .main)
+        tableView.register(nib, forCellReuseIdentifier: SingerCell.reusableID)
     }
 }
 
 // MARK: Bind
 
-extension MainVC {
+extension SingerVC {
     private func bindViewModel() {
         let viewWillApper = self.rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
-            .map { _ in }
-            .asDriver { error -> Driver<()> in
-                return Driver.empty()
-            }
+            .mapToVoid()
+            .asDriverOnErrorJustComplete()
         
-        let input = MainVM.Input(viewWillAppear: viewWillApper)
+        let input = SingerVM.Input(viewWillAppear: viewWillApper)
         
         let output = viewModel.transform(input)
         
         output.restaurants
-            .drive(tableView.rx.items(cellIdentifier: "Cell")) { index, item, cell in
+            .drive(
+                tableView.rx.items(
+                    cellIdentifier: SingerCell.reusableID,
+                    cellType: SingerCell.self)
+            ) { index, item, cell in
                 cell.textLabel?.text = item.displayText
             }
             .disposed(by: disposeBag)
