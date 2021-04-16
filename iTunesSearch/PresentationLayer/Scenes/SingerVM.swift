@@ -16,7 +16,8 @@ final class SingerVM: ViewModelType {
     }
     
     struct Output {
-        let restaurants: Driver<[Restaurant]>
+        let iTunes: Driver<[Itunes]>
+        let errorResult: Driver<Error>
     }
     
     private let provider: ServiceProviderType
@@ -26,15 +27,28 @@ final class SingerVM: ViewModelType {
     }
     
     func transform(_ input: Input) -> Output {
-        let restaurants = input.viewWillAppear
-            .flatMapLatest { [weak self] _ -> Driver<[Restaurant]> in
+        let errorSubject: PublishSubject<Error> = .init() 
+        
+        let iTunes = input.viewWillAppear
+            .flatMapLatest { [weak self] _ -> Driver<[Itunes]> in
                 guard let self = self else { return Driver.empty() }
                 
-                return self.provider.networkService.fetchRestaurant()
-                    .asDriver(onErrorJustReturn: [])
+                let endpoint: Endpoint = .fetchSinger(term: "Ed+Sheeran", entity: "song") 
+                return self.provider.networkService
+                    .fetchData(endpoint: endpoint, ResultBase.self)
+                    .map { $0.results }
+                    .asDriver { error -> Driver<[Itunes]> in
+                        errorSubject.onNext(error)
+                        return Driver.empty()
+                    }
             }
         
-        return Output(restaurants: restaurants)
+        let errorResult = errorSubject.asDriverOnErrorJustComplete()
+        
+        return Output(
+            iTunes: iTunes,
+            errorResult: errorResult
+        )
     }
     
     func fetchItunesResult() {

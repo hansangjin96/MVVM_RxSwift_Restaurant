@@ -42,7 +42,7 @@ final class SingerVC: UIViewController {
 
 extension SingerVC {
     private func bindViewModel() {
-        let viewWillApper = self.rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
+        let viewWillApper = self.rx.viewWillAppear
             .mapToVoid()
             .asDriverOnErrorJustComplete()
         
@@ -50,13 +50,14 @@ extension SingerVC {
         
         let output = viewModel.transform(input)
         
-        output.restaurants
+        output.iTunes
             .drive(
                 tableView.rx.items(
                     cellIdentifier: SingerCell.reusableID,
                     cellType: SingerCell.self)
             ) { index, item, cell in
-                cell.textLabel?.text = item.displayText
+                Logger.info(item.artistName)
+                cell.textLabel?.text = item.kind
             }
             .disposed(by: disposeBag)
     }

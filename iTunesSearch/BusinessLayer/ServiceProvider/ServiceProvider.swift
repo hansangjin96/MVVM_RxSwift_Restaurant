@@ -8,9 +8,9 @@
 import Foundation
 
 protocol ServiceProviderType {
-    var networkService: NetworkServiceType { get }
+    var networkService: NetworkManagerType { get }
 }
 
 final class ServiceProvider: ServiceProviderType {
-    lazy var networkService: NetworkServiceType = NetworkService(provider: self)
+    lazy var networkService: NetworkManagerType = NetworkManager()
 }

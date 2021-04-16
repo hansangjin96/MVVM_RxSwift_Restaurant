@@ -18,6 +18,12 @@
 		402697BB26272A0F003966B9 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402697BA26272A0F003966B9 /* ServiceProvider.swift */; };
 		402697C326273586003966B9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402697C226273586003966B9 /* NetworkService.swift */; };
 		402697CC26273716003966B9 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402697CB26273716003966B9 /* Restaurant.swift */; };
+		4045A5CE2629DB4900C07E74 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045A5CD2629DB4900C07E74 /* NetworkConstant.swift */; };
+		4045A5D72629E01700C07E74 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045A5D62629E01700C07E74 /* EndpointType.swift */; };
+		4045A5DF2629E02E00C07E74 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045A5DE2629E02E00C07E74 /* Endpoint.swift */; };
+		4045A5E52629E10600C07E74 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045A5E42629E10600C07E74 /* URLParameterEncoder.swift */; };
+		4045A5F42629E12800C07E74 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045A5F32629E12800C07E74 /* Parser.swift */; };
+		4045A5FC2629E20D00C07E74 /* ResultBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045A5FB2629E20D00C07E74 /* ResultBase.swift */; };
 		40CB77FE262675BE0053F258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB77FD262675BE0053F258 /* AppDelegate.swift */; };
 		40CB7800262675BE0053F258 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB77FF262675BE0053F258 /* SceneDelegate.swift */; };
 		40CB7802262675BE0053F258 /* SingerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB7801262675BE0053F258 /* SingerVC.swift */; };
@@ -70,6 +76,12 @@
 		402697BA26272A0F003966B9 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		402697C226273586003966B9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		402697CB26273716003966B9 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		4045A5CD2629DB4900C07E74 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
+		4045A5D62629E01700C07E74 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		4045A5DE2629E02E00C07E74 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		4045A5E42629E10600C07E74 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		4045A5F32629E12800C07E74 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		4045A5FB2629E20D00C07E74 /* ResultBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBase.swift; sourceTree = "<group>"; };
 		40CB77FA262675BE0053F258 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40CB77FD262675BE0053F258 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40CB77FF262675BE0053F258 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +139,11 @@
 		400215172629D7CF0048021B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4045A5CD2629DB4900C07E74 /* NetworkConstant.swift */,
 				4002151D2629D8970048021B /* NetworkManager.swift */,
+				4045A5E92629E11300C07E74 /* Parser */,
+				4045A5E32629E0FB00C07E74 /* Encoder */,
+				4045A5D52629DFFE00C07E74 /* Endpoint */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -154,8 +170,8 @@
 		4002151B2629D8480048021B /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
-				4002151C2629D8670048021B /* Utility */,
 				400215172629D7CF0048021B /* Network */,
+				4002151C2629D8670048021B /* Utility */,
 				40CB783F262676DD0053F258 /* Resources */,
 			);
 			path = CoreLayer;
@@ -230,8 +246,34 @@
 			isa = PBXGroup;
 			children = (
 				402697CB26273716003966B9 /* Restaurant.swift */,
+				4045A5FB2629E20D00C07E74 /* ResultBase.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4045A5D52629DFFE00C07E74 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				4045A5D62629E01700C07E74 /* EndpointType.swift */,
+				4045A5DE2629E02E00C07E74 /* Endpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		4045A5E32629E0FB00C07E74 /* Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				4045A5E42629E10600C07E74 /* URLParameterEncoder.swift */,
+			);
+			path = Encoder;
+			sourceTree = "<group>";
+		};
+		4045A5E92629E11300C07E74 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				4045A5F32629E12800C07E74 /* Parser.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 		40CB77F1262675BE0053F258 = {
@@ -490,9 +532,12 @@
 				402697CC26273716003966B9 /* Restaurant.swift in Sources */,
 				402697C326273586003966B9 /* NetworkService.swift in Sources */,
 				40269794262723CA003966B9 /* AppCoordinator.swift in Sources */,
+				4045A5CE2629DB4900C07E74 /* NetworkConstant.swift in Sources */,
 				40E0D3902629A249000E76FC /* SingerCell.swift in Sources */,
 				40DDC79E2629A83A00597480 /* UIViewController+Rx.swift in Sources */,
 				402697B6262729FE003966B9 /* AppContainer.swift in Sources */,
+				4045A5E52629E10600C07E74 /* URLParameterEncoder.swift in Sources */,
+				4045A5D72629E01700C07E74 /* EndpointType.swift in Sources */,
 				402697A726272803003966B9 /* SingerVM.swift in Sources */,
 				40DDC79C2629A83A00597480 /* Observable+Extensions.swift in Sources */,
 				402697BB26272A0F003966B9 /* ServiceProvider.swift in Sources */,
@@ -500,8 +545,11 @@
 				40DDC79D2629A83A00597480 /* UIImageView+isNotHidden.swift in Sources */,
 				4002151E2629D8970048021B /* NetworkManager.swift in Sources */,
 				40CB7802262675BE0053F258 /* SingerVC.swift in Sources */,
+				4045A5F42629E12800C07E74 /* Parser.swift in Sources */,
 				40DDC7942629A82E00597480 /* String+localized.swift in Sources */,
+				4045A5DF2629E02E00C07E74 /* Endpoint.swift in Sources */,
 				40CB77FE262675BE0053F258 /* AppDelegate.swift in Sources */,
+				4045A5FC2629E20D00C07E74 /* ResultBase.swift in Sources */,
 				40CB7800262675BE0053F258 /* SceneDelegate.swift in Sources */,
 				40DDC78E2629A82700597480 /* Cell+ReuseIdentifiable.swift in Sources */,
 				40269799262723E2003966B9 /* CoordinatorType.swift in Sources */,
