@@ -1,4 +1,4 @@
-# MVVM_RxSwift_iTunes_Search
+# iTunesSearch
 
 [RxSwift 기초 스터디](https://www.notion.so/RxSwift-213ed9b3dab846cab19ff96c1afe21a4)에서 만든 예제 프로젝트를 디벨롶합니다.
 
