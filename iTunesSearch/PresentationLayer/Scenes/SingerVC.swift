@@ -35,6 +35,7 @@ final class SingerVC: UIViewController {
     private func configureTableView() {
         let nib = UINib(nibName: SingerCell.reusableID, bundle: .main)
         tableView.register(nib, forCellReuseIdentifier: SingerCell.reusableID)
+        tableView.rowHeight = 100
     }
 }
 
@@ -56,8 +57,7 @@ extension SingerVC {
                     cellIdentifier: SingerCell.reusableID,
                     cellType: SingerCell.self)
             ) { index, item, cell in
-                Logger.info(item.artistName)
-                cell.textLabel?.text = item.kind
+                cell.bind(with: item)
             }
             .disposed(by: disposeBag)
     }

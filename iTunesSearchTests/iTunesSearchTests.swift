@@ -6,9 +6,9 @@
 //
 
 import XCTest
-@testable import MVVM_RxSwift_Restaurant
+@testable import iTunesSearch
 
-class MVVM_RxSwift_RestaurantTests: XCTestCase {
+class iTunesSearchTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

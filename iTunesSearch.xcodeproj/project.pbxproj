@@ -17,26 +17,28 @@
 		402697B6262729FE003966B9 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402697B5262729FE003966B9 /* AppContainer.swift */; };
 		402697BB26272A0F003966B9 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402697BA26272A0F003966B9 /* ServiceProvider.swift */; };
 		402697C326273586003966B9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402697C226273586003966B9 /* NetworkService.swift */; };
-		402697CC26273716003966B9 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402697CB26273716003966B9 /* Restaurant.swift */; };
 		4045A5CE2629DB4900C07E74 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045A5CD2629DB4900C07E74 /* NetworkConstant.swift */; };
 		4045A5D72629E01700C07E74 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045A5D62629E01700C07E74 /* EndpointType.swift */; };
 		4045A5DF2629E02E00C07E74 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045A5DE2629E02E00C07E74 /* Endpoint.swift */; };
 		4045A5E52629E10600C07E74 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045A5E42629E10600C07E74 /* URLParameterEncoder.swift */; };
 		4045A5F42629E12800C07E74 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045A5F32629E12800C07E74 /* Parser.swift */; };
 		4045A5FC2629E20D00C07E74 /* ResultBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045A5FB2629E20D00C07E74 /* ResultBase.swift */; };
+		4045DFF42629EE660021E9C6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4045DFF32629EE660021E9C6 /* RxSwift */; };
+		4045DFF62629EE660021E9C6 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 4045DFF52629EE660021E9C6 /* RxTest */; };
+		4045DFF82629EE660021E9C6 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 4045DFF72629EE660021E9C6 /* RxRelay */; };
+		4045DFFA2629EE660021E9C6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4045DFF92629EE660021E9C6 /* RxCocoa */; };
+		4045DFFC2629EE660021E9C6 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 4045DFFB2629EE660021E9C6 /* RxBlocking */; };
+		404BAAC7262A7DDD007F8D24 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404BAAC6262A7DDD007F8D24 /* ImageCache.swift */; };
 		40CB77FE262675BE0053F258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB77FD262675BE0053F258 /* AppDelegate.swift */; };
 		40CB7800262675BE0053F258 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB77FF262675BE0053F258 /* SceneDelegate.swift */; };
 		40CB7802262675BE0053F258 /* SingerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB7801262675BE0053F258 /* SingerVC.swift */; };
 		40CB7805262675BE0053F258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40CB7803262675BE0053F258 /* Main.storyboard */; };
 		40CB7807262675C10053F258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40CB7806262675C10053F258 /* Assets.xcassets */; };
 		40CB780A262675C10053F258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40CB7808262675C10053F258 /* LaunchScreen.storyboard */; };
-		40CB7815262675C10053F258 /* MVVM_RxSwift_RestaurantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB7814262675C10053F258 /* MVVM_RxSwift_RestaurantTests.swift */; };
-		40CB7820262675C10053F258 /* MVVM_RxSwift_RestaurantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB781F262675C10053F258 /* MVVM_RxSwift_RestaurantUITests.swift */; };
-		40CB7832262676620053F258 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 40CB7831262676620053F258 /* RxSwift */; };
-		40CB7834262676620053F258 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 40CB7833262676620053F258 /* RxTest */; };
-		40CB7836262676620053F258 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 40CB7835262676620053F258 /* RxRelay */; };
-		40CB7838262676620053F258 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 40CB7837262676620053F258 /* RxCocoa */; };
-		40CB783A262676620053F258 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 40CB7839262676620053F258 /* RxBlocking */; };
+		40CB7815262675C10053F258 /* iTunesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB7814262675C10053F258 /* iTunesSearchTests.swift */; };
+		40CB7820262675C10053F258 /* iTunesSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB781F262675C10053F258 /* iTunesSearchUITests.swift */; };
+		40DCDAC9262B0FF5007ED056 /* UIImage+decodedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DCDAC8262B0FF5007ED056 /* UIImage+decodedImage.swift */; };
+		40DCDACE262B11D3007ED056 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DCDACD262B11D3007ED056 /* ImageLoader.swift */; };
 		40DDC78E2629A82700597480 /* Cell+ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DDC78D2629A82700597480 /* Cell+ReuseIdentifiable.swift */; };
 		40DDC7942629A82E00597480 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DDC7922629A82E00597480 /* String+localized.swift */; };
 		40DDC7952629A82E00597480 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DDC7932629A82E00597480 /* Optional+Extension.swift */; };
@@ -75,13 +77,13 @@
 		402697B5262729FE003966B9 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		402697BA26272A0F003966B9 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		402697C226273586003966B9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		402697CB26273716003966B9 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		4045A5CD2629DB4900C07E74 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		4045A5D62629E01700C07E74 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
 		4045A5DE2629E02E00C07E74 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		4045A5E42629E10600C07E74 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 		4045A5F32629E12800C07E74 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		4045A5FB2629E20D00C07E74 /* ResultBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBase.swift; sourceTree = "<group>"; };
+		404BAAC6262A7DDD007F8D24 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		40CB77FA262675BE0053F258 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40CB77FD262675BE0053F258 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40CB77FF262675BE0053F258 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,11 +93,13 @@
 		40CB7809262675C10053F258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40CB780B262675C10053F258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40CB7810262675C10053F258 /* iTunesSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		40CB7814262675C10053F258 /* MVVM_RxSwift_RestaurantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_RxSwift_RestaurantTests.swift; sourceTree = "<group>"; };
+		40CB7814262675C10053F258 /* iTunesSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchTests.swift; sourceTree = "<group>"; };
 		40CB7816262675C10053F258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40CB781B262675C10053F258 /* iTunesSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		40CB781F262675C10053F258 /* MVVM_RxSwift_RestaurantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_RxSwift_RestaurantUITests.swift; sourceTree = "<group>"; };
+		40CB781F262675C10053F258 /* iTunesSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchUITests.swift; sourceTree = "<group>"; };
 		40CB7821262675C10053F258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40DCDAC8262B0FF5007ED056 /* UIImage+decodedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+decodedImage.swift"; sourceTree = "<group>"; };
+		40DCDACD262B11D3007ED056 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		40DDC78D2629A82700597480 /* Cell+ReuseIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cell+ReuseIdentifiable.swift"; sourceTree = "<group>"; };
 		40DDC7922629A82E00597480 /* String+localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		40DDC7932629A82E00597480 /* Optional+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
@@ -111,9 +115,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40CB7838262676620053F258 /* RxCocoa in Frameworks */,
-				40CB7836262676620053F258 /* RxRelay in Frameworks */,
-				40CB7832262676620053F258 /* RxSwift in Frameworks */,
+				4045DFFA2629EE660021E9C6 /* RxCocoa in Frameworks */,
+				4045DFF82629EE660021E9C6 /* RxRelay in Frameworks */,
+				4045DFF42629EE660021E9C6 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +125,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40CB7834262676620053F258 /* RxTest in Frameworks */,
-				40CB783A262676620053F258 /* RxBlocking in Frameworks */,
+				4045DFF62629EE660021E9C6 /* RxTest in Frameworks */,
+				4045DFFC2629EE660021E9C6 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +174,7 @@
 		4002151B2629D8480048021B /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				404BAAC5262A7DC8007F8D24 /* Cache */,
 				400215172629D7CF0048021B /* Network */,
 				4002151C2629D8670048021B /* Utility */,
 				40CB783F262676DD0053F258 /* Resources */,
@@ -245,7 +250,6 @@
 		402697CA26273700003966B9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				402697CB26273716003966B9 /* Restaurant.swift */,
 				4045A5FB2629E20D00C07E74 /* ResultBase.swift */,
 			);
 			path = Model;
@@ -276,12 +280,21 @@
 			path = Parser;
 			sourceTree = "<group>";
 		};
+		404BAAC5262A7DC8007F8D24 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				404BAAC6262A7DDD007F8D24 /* ImageCache.swift */,
+				40DCDACD262B11D3007ED056 /* ImageLoader.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		40CB77F1262675BE0053F258 = {
 			isa = PBXGroup;
 			children = (
-				40CB77FC262675BE0053F258 /* MVVM_RxSwift_Restaurant */,
-				40CB7813262675C10053F258 /* MVVM_RxSwift_RestaurantTests */,
-				40CB781E262675C10053F258 /* MVVM_RxSwift_RestaurantUITests */,
+				40CB77FC262675BE0053F258 /* iTunesSearch */,
+				40CB7813262675C10053F258 /* iTunesSearchTests */,
+				40CB781E262675C10053F258 /* iTunesSearchUITests */,
 				40CB77FB262675BE0053F258 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -296,7 +309,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		40CB77FC262675BE0053F258 /* MVVM_RxSwift_Restaurant */ = {
+		40CB77FC262675BE0053F258 /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
 				400215182629D80C0048021B /* ApplicationLayer */,
@@ -305,27 +318,24 @@
 				400215192629D8340048021B /* PresentationLayer */,
 				40CB7840262676E30053F258 /* Support */,
 			);
-			name = MVVM_RxSwift_Restaurant;
 			path = iTunesSearch;
 			sourceTree = "<group>";
 		};
-		40CB7813262675C10053F258 /* MVVM_RxSwift_RestaurantTests */ = {
+		40CB7813262675C10053F258 /* iTunesSearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				40CB7814262675C10053F258 /* MVVM_RxSwift_RestaurantTests.swift */,
+				40CB7814262675C10053F258 /* iTunesSearchTests.swift */,
 				40CB7816262675C10053F258 /* Info.plist */,
 			);
-			name = MVVM_RxSwift_RestaurantTests;
 			path = iTunesSearchTests;
 			sourceTree = "<group>";
 		};
-		40CB781E262675C10053F258 /* MVVM_RxSwift_RestaurantUITests */ = {
+		40CB781E262675C10053F258 /* iTunesSearchUITests */ = {
 			isa = PBXGroup;
 			children = (
-				40CB781F262675C10053F258 /* MVVM_RxSwift_RestaurantUITests.swift */,
+				40CB781F262675C10053F258 /* iTunesSearchUITests.swift */,
 				40CB7821262675C10053F258 /* Info.plist */,
 			);
-			name = MVVM_RxSwift_RestaurantUITests;
 			path = iTunesSearchUITests;
 			sourceTree = "<group>";
 		};
@@ -371,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				40DDC78D2629A82700597480 /* Cell+ReuseIdentifiable.swift */,
+				40DCDAC8262B0FF5007ED056 /* UIImage+decodedImage.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -401,9 +412,9 @@
 			);
 			name = iTunesSearch;
 			packageProductDependencies = (
-				40CB7831262676620053F258 /* RxSwift */,
-				40CB7835262676620053F258 /* RxRelay */,
-				40CB7837262676620053F258 /* RxCocoa */,
+				4045DFF32629EE660021E9C6 /* RxSwift */,
+				4045DFF72629EE660021E9C6 /* RxRelay */,
+				4045DFF92629EE660021E9C6 /* RxCocoa */,
 			);
 			productName = MVVM_RxSwift_Restaurant;
 			productReference = 40CB77FA262675BE0053F258 /* iTunesSearch.app */;
@@ -424,8 +435,8 @@
 			);
 			name = iTunesSearchTests;
 			packageProductDependencies = (
-				40CB7833262676620053F258 /* RxTest */,
-				40CB7839262676620053F258 /* RxBlocking */,
+				4045DFF52629EE660021E9C6 /* RxTest */,
+				4045DFFB2629EE660021E9C6 /* RxBlocking */,
 			);
 			productName = MVVM_RxSwift_RestaurantTests;
 			productReference = 40CB7810262675C10053F258 /* iTunesSearchTests.xctest */;
@@ -481,7 +492,7 @@
 			);
 			mainGroup = 40CB77F1262675BE0053F258;
 			packageReferences = (
-				40CB7830262676620053F258 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				4045DFF22629EE660021E9C6 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 40CB77FB262675BE0053F258 /* Products */;
 			projectDirPath = "";
@@ -529,8 +540,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				400215042629A8D90048021B /* Logger.swift in Sources */,
-				402697CC26273716003966B9 /* Restaurant.swift in Sources */,
 				402697C326273586003966B9 /* NetworkService.swift in Sources */,
+				40DCDACE262B11D3007ED056 /* ImageLoader.swift in Sources */,
 				40269794262723CA003966B9 /* AppCoordinator.swift in Sources */,
 				4045A5CE2629DB4900C07E74 /* NetworkConstant.swift in Sources */,
 				40E0D3902629A249000E76FC /* SingerCell.swift in Sources */,
@@ -540,6 +551,7 @@
 				4045A5D72629E01700C07E74 /* EndpointType.swift in Sources */,
 				402697A726272803003966B9 /* SingerVM.swift in Sources */,
 				40DDC79C2629A83A00597480 /* Observable+Extensions.swift in Sources */,
+				404BAAC7262A7DDD007F8D24 /* ImageCache.swift in Sources */,
 				402697BB26272A0F003966B9 /* ServiceProvider.swift in Sources */,
 				40DDC7952629A82E00597480 /* Optional+Extension.swift in Sources */,
 				40DDC79D2629A83A00597480 /* UIImageView+isNotHidden.swift in Sources */,
@@ -547,6 +559,7 @@
 				40CB7802262675BE0053F258 /* SingerVC.swift in Sources */,
 				4045A5F42629E12800C07E74 /* Parser.swift in Sources */,
 				40DDC7942629A82E00597480 /* String+localized.swift in Sources */,
+				40DCDAC9262B0FF5007ED056 /* UIImage+decodedImage.swift in Sources */,
 				4045A5DF2629E02E00C07E74 /* Endpoint.swift in Sources */,
 				40CB77FE262675BE0053F258 /* AppDelegate.swift in Sources */,
 				4045A5FC2629E20D00C07E74 /* ResultBase.swift in Sources */,
@@ -561,7 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40CB7815262675C10053F258 /* MVVM_RxSwift_RestaurantTests.swift in Sources */,
+				40CB7815262675C10053F258 /* iTunesSearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,7 +582,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40CB7820262675C10053F258 /* MVVM_RxSwift_RestaurantUITests.swift in Sources */,
+				40CB7820262675C10053F258 /* iTunesSearchUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,7 +743,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P25P5JJVFC;
+				DEVELOPMENT_TEAM = 85329TR25G;
 				INFOPLIST_FILE = iTunesSearch/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -749,7 +762,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P25P5JJVFC;
+				DEVELOPMENT_TEAM = 85329TR25G;
 				INFOPLIST_FILE = iTunesSearch/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -768,7 +781,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P25P5JJVFC;
+				DEVELOPMENT_TEAM = 85329TR25G;
 				INFOPLIST_FILE = MVVM_RxSwift_RestaurantTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -790,7 +803,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P25P5JJVFC;
+				DEVELOPMENT_TEAM = 85329TR25G;
 				INFOPLIST_FILE = MVVM_RxSwift_RestaurantTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -811,7 +824,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P25P5JJVFC;
+				DEVELOPMENT_TEAM = 85329TR25G;
 				INFOPLIST_FILE = MVVM_RxSwift_RestaurantUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -831,7 +844,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P25P5JJVFC;
+				DEVELOPMENT_TEAM = 85329TR25G;
 				INFOPLIST_FILE = MVVM_RxSwift_RestaurantUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -888,7 +901,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		40CB7830262676620053F258 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		4045DFF22629EE660021E9C6 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
 			requirement = {
@@ -899,29 +912,29 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		40CB7831262676620053F258 /* RxSwift */ = {
+		4045DFF32629EE660021E9C6 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 40CB7830262676620053F258 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 4045DFF22629EE660021E9C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
-		40CB7833262676620053F258 /* RxTest */ = {
+		4045DFF52629EE660021E9C6 /* RxTest */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 40CB7830262676620053F258 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 4045DFF22629EE660021E9C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxTest;
 		};
-		40CB7835262676620053F258 /* RxRelay */ = {
+		4045DFF72629EE660021E9C6 /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 40CB7830262676620053F258 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 4045DFF22629EE660021E9C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
 		};
-		40CB7837262676620053F258 /* RxCocoa */ = {
+		4045DFF92629EE660021E9C6 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 40CB7830262676620053F258 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 4045DFF22629EE660021E9C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		40CB7839262676620053F258 /* RxBlocking */ = {
+		4045DFFB2629EE660021E9C6 /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 40CB7830262676620053F258 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 4045DFF22629EE660021E9C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxBlocking;
 		};
 /* End XCSwiftPackageProductDependency section */
