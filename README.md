@@ -9,12 +9,13 @@
 - API 참고 문서: [https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1)
 - 참고 강의: Raywenderich URLSession 강의 - [https://www.raywenderlich.com/3244963-urlsession-tutorial-getting-started](https://www.raywenderlich.com/3244963-urlsession-tutorial-getting-started)
 
-### **선택 구현2**
+### **개별 구현**
 
 - iTunes 에서 특정 가수를 검색할 수 있는 검색 기능 + 테이블 구현
 - 셀에서 앨범 이미지, 가수 이름, 노래 제목을 보여주기
 - 디테일 뷰 구성은 자유롭게
-- (선택) 1분 미리 듣기 추가 (AVFoundation, AVKit)
+- 1분 미리 듣기 추가 (AVFoundation, AVKit)
+- 검색 히스토리 추가 (CoreData)
 
 ### **Requirements**
 
