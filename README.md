@@ -1,6 +1,6 @@
 # iTunesSearch
 
-[RxSwift 기초 스터디](https://www.notion.so/RxSwift-213ed9b3dab846cab19ff96c1afe21a4)에서 만든 예제 프로젝트를 디벨롶합니다.
+[RxSwift 기초 스터디](https://www.notion.so/RxSwift-213ed9b3dab846cab19ff96c1afe21a4)에서 개인이 Develop하는 프로젝트 입니다.
 
 ### **공통 구현 사항**
 
@@ -16,6 +16,16 @@
 - 디테일 뷰 구성은 자유롭게
 - 1분 미리 듣기 추가 (AVFoundation, AVKit)
 - 검색 히스토리 추가 (CoreData)
+
+### **사용 스택**
+
+- MVVM-C
+- Storyboard, xib
+- URLSession
+- Cache
+- AVFoundation
+- CoreData
+- Git: Project, Issue
 
 ### **Requirements**
 
