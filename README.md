@@ -6,8 +6,8 @@
 
 - 테이블 뷰 + 디테일 뷰 구성
 - 테이블 구현 + (iTunes 음악 검색 기능 구현)
-- API 참고 문서: [https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1)
-- 참고 강의: Raywenderich URLSession 강의 - [https://www.raywenderlich.com/3244963-urlsession-tutorial-getting-started](https://www.raywenderlich.com/3244963-urlsession-tutorial-getting-started)
+- API 참고 문서: 
+  [https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1)
 
 ### **개별 구현**
 
