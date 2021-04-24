@@ -60,8 +60,7 @@ final class SingerVM: ViewModelType {
         cellClickEvent
             .asDriverOnErrorJustComplete()
             .drive(onNext: { [weak self] in
-                print($0)
-                self?.coordinator.toDetail()
+                self?.coordinator.toDetail(with: $0)
             })
             .disposed(by: disposeBag)
     }
