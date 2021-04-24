@@ -11,47 +11,58 @@ import RxCocoa
 import RxSwift
 
 final class SingerVM: ViewModelType {
-    struct Input {
-        let viewWillAppear: Driver<Void>
-    }
     
-    struct Output {
-        let iTunes: Driver<[Itunes]>
-        let errorResult: Driver<Error>
-    }
+    // MARK: State
+    
+    let searchResultRelay: BehaviorRelay<[Itunes]> = .init(value: [])
+    let queryRelay: BehaviorRelay<String> = .init(value: "")
+    
+    // MARK: Event
+    
+    let cellClickEvent: PublishRelay<Itunes> = .init()
+    let errorEvent: PublishRelay<Error> = .init()
     
     private let provider: ServiceProviderType
+    private let coordinator: SingerCoordinatorType
     
-    init(provider: ServiceProviderType) {
+    private var disposeBag: DisposeBag = .init()
+    
+    init(
+        provider: ServiceProviderType,
+        coordinator: SingerCoordinatorType
+    ) {
         self.provider = provider
+        self.coordinator = coordinator
     }
     
-    func transform(_ input: Input) -> Output {
-        let errorSubject: PublishSubject<Error> = .init() 
-        
-        let iTunes = input.viewWillAppear
-            .flatMapLatest { [weak self] _ -> Driver<[Itunes]> in
+    func start() {
+        queryRelay
+            .debounce(
+                .milliseconds(100),
+                scheduler: ConcurrentDispatchQueueScheduler.init(qos: .utility)
+            )
+            .flatMapLatest { [weak self] query -> Driver<[Itunes]> in
                 guard let self = self else { return Driver.empty() }
                 
-                let endpoint: Endpoint = .fetchSinger(term: "Ed+Sheeran", entity: "song") 
+                let endpoint: Endpoint = .fetchSinger(term: query)
+                
                 return self.provider.networkService
                     .fetchData(endpoint: endpoint, ResultBase.self)
                     .map { $0.results }
-                    .asDriver { error -> Driver<[Itunes]> in
-                        errorSubject.onNext(error)
+                    .asDriver { [weak self] error -> Driver<[Itunes]> in
+                        self?.errorEvent.accept(error)
                         return Driver.empty()
                     }
             }
+            .bind(to: searchResultRelay)
+            .disposed(by: disposeBag)
         
-        let errorResult = errorSubject.asDriverOnErrorJustComplete()
-        
-        return Output(
-            iTunes: iTunes,
-            errorResult: errorResult
-        )
-    }
-    
-    func fetchItunesResult() {
-        
+        cellClickEvent
+            .asDriverOnErrorJustComplete()
+            .drive(onNext: { [weak self] in
+                print($0)
+                self?.coordinator.toDetail()
+            })
+            .disposed(by: disposeBag)
     }
 }

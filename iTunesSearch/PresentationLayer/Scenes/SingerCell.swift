@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SingerCell: UITableViewCell {
+final class SingerCell: UITableViewCell {
     @IBOutlet weak var singerImage: UIImageView!
     @IBOutlet weak var singerName: UILabel!
     @IBOutlet weak var songName: UILabel!

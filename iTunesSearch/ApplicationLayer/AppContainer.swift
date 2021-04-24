@@ -15,21 +15,10 @@ class AppContainer {
         return ServiceProvider()
     }
     
-    var singerNavi: UINavigationController {
-        let vc = singerVC
-        vc.viewModel = singerVM
-        let navi = UINavigationController(rootViewController: vc)
-        return navi
-    }
-    
-    var singerVC: SingerVC {
+    func getSingerVC(coordinator: SingerCoordinatorType) -> SingerVC {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         let vc = storyboard.instantiateInitialViewController() as! SingerVC
-        
+        vc.viewModel = SingerVM(provider: serviceProvider, coordinator: coordinator)
         return vc
-    }
-    
-    var singerVM: SingerVM {
-        return SingerVM(provider: serviceProvider)
     }
 }

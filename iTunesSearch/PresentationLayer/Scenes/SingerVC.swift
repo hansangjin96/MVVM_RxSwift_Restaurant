@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-final class SingerVC: UIViewController {
+final class SingerVC: BaseVC<SingerVM> {
     
     // MARK: UI Property
     
@@ -18,47 +18,66 @@ final class SingerVC: UIViewController {
     
     // MARK: Property
     
-    private var disposeBag: DisposeBag = .init()
-    var viewModel: SingerVM!
-    
     // MARK: Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureTableView()
         bindViewModel()
-    }
-    
-    // MARK: Method
-    
-    private func configureTableView() {
-        let nib = UINib(nibName: SingerCell.reusableID, bundle: .main)
-        tableView.register(nib, forCellReuseIdentifier: SingerCell.reusableID)
-        tableView.rowHeight = 100
+        setupUI()
     }
 }
 
 // MARK: Bind
 
-extension SingerVC {
-    private func bindViewModel() {
-        let viewWillApper = self.rx.viewWillAppear
-            .mapToVoid()
-            .asDriverOnErrorJustComplete()
+private extension SingerVC {
+    func bindViewModel() {
+        eventBind()
+        stateBind()
+    }
+    
+    func eventBind() {
+        // searchController 
         
-        let input = SingerVM.Input(viewWillAppear: viewWillApper)
-        
-        let output = viewModel.transform(input)
-        
-        output.iTunes
+        // TODO: ObservableType만 bind 가능한 지 다시 찾아보기
+        tableView.rx.modelDeleted(Itunes.self)
+            .bind(to: viewModel.cellClickEvent)
+            .disposed(by: disposeBag)
+    }
+    
+    func stateBind() {
+        viewModel.searchResultRelay
+            .asDriver()
             .drive(
                 tableView.rx.items(
                     cellIdentifier: SingerCell.reusableID,
-                    cellType: SingerCell.self)
+                    cellType: SingerCell.self
+                )
             ) { index, item, cell in
                 cell.bind(with: item)
             }
             .disposed(by: disposeBag)
+        
+        viewModel.errorEvent
+            .asDriverOnErrorJustComplete()
+            .drive(onNext: {
+                Logger.info($0)
+                // ErrorHandler
+            })
+            .disposed(by: disposeBag)
+    }
+}
+
+// MARK: UI
+
+private extension SingerVC {
+    func setupUI() {
+        configureTableView()
+    }
+    
+    func configureTableView() {
+        let nib = UINib(nibName: SingerCell.reusableID, bundle: .main)
+        tableView.register(nib, forCellReuseIdentifier: SingerCell.reusableID)
+        tableView.rowHeight = 100
     }
 }

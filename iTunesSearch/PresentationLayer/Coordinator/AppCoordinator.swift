@@ -9,13 +9,31 @@ import UIKit
 
 final class AppCoordinator: CoordinatorType {
     private let window: UIWindow
+    private let navi: UINavigationController = .init()
+    
+    var isLoggedIn: Bool = true
     
     init(window: UIWindow) {
         self.window = window
     }
     
     func start() {
-        window.rootViewController = AppContainer.shared.singerNavi
+        window.rootViewController = navi
         window.makeKeyAndVisible()
+        
+        if isLoggedIn {
+            showSinger()
+        } else {
+            showLogin()
+        }
+    }
+    
+    private func showLogin() {
+        
+    }
+    
+    private func showSinger() {
+        let coordinator = SingerCoordinator(navi: navi)
+        coordinator.start()
     }
 }

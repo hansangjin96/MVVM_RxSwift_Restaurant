@@ -9,7 +9,7 @@ import Foundation
 
 enum Endpoint: EndpointType {
     case fetchSinger(term: String,
-                     entity: String)
+                     entity: String = "song")
     
     var baseUrl: URL {
         guard let url = URL(string: Server.baseURL) else {

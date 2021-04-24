@@ -5,9 +5,8 @@
 //  Created by 한상진 on 2021/04/14.
 //
 
-import Foundation
+import UIKit
 
 protocol CoordinatorType {
-    
     func start()
 }

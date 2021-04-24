@@ -47,6 +47,8 @@
 		40DDC79E2629A83A00597480 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DDC79B2629A83A00597480 /* UIViewController+Rx.swift */; };
 		40E0D3902629A249000E76FC /* SingerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D38E2629A249000E76FC /* SingerCell.swift */; };
 		40E0D3912629A249000E76FC /* SingerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E0D38F2629A249000E76FC /* SingerCell.xib */; };
+		40E765312634421900E5D543 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E765302634421900E5D543 /* BaseVC.swift */; };
+		40E7654126344BB300E5D543 /* SingerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E7654026344BB300E5D543 /* SingerCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		40DDC79B2629A83A00597480 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		40E0D38E2629A249000E76FC /* SingerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerCell.swift; sourceTree = "<group>"; };
 		40E0D38F2629A249000E76FC /* SingerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingerCell.xib; sourceTree = "<group>"; };
+		40E765302634421900E5D543 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		40E7654026344BB300E5D543 /* SingerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,8 +180,6 @@
 			children = (
 				404BAAC5262A7DC8007F8D24 /* Cache */,
 				400215172629D7CF0048021B /* Network */,
-				4002151C2629D8670048021B /* Utility */,
-				40CB783F262676DD0053F258 /* Resources */,
 			);
 			path = CoreLayer;
 			sourceTree = "<group>";
@@ -186,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				400215032629A8D90048021B /* Logger.swift */,
-				40DDC78C2629A81700597480 /* Extension */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -194,8 +195,6 @@
 		400215222629D8C10048021B /* BusinessLayer */ = {
 			isa = PBXGroup;
 			children = (
-				400215272629D9F40048021B /* Enum */,
-				400215262629D9E80048021B /* Protocol */,
 				402697B4262729D8003966B9 /* ServiceProvider */,
 				402697CA26273700003966B9 /* Model */,
 			);
@@ -222,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				40269793262723CA003966B9 /* AppCoordinator.swift */,
+				40E7654026344BB300E5D543 /* SingerCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -312,10 +312,12 @@
 		40CB77FC262675BE0053F258 /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				40E7652E263441BC00E5D543 /* Common */,
 				400215182629D80C0048021B /* ApplicationLayer */,
-				400215222629D8C10048021B /* BusinessLayer */,
 				4002151B2629D8480048021B /* CoreLayer */,
+				400215222629D8C10048021B /* BusinessLayer */,
 				400215192629D8340048021B /* PresentationLayer */,
+				40CB783F262676DD0053F258 /* Resources */,
 				40CB7840262676E30053F258 /* Support */,
 			);
 			path = iTunesSearch;
@@ -393,6 +395,26 @@
 				40DDC7922629A82E00597480 /* String+localized.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		40E7652E263441BC00E5D543 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				40E7652F2634420900E5D543 /* Base */,
+				400215262629D9E80048021B /* Protocol */,
+				400215272629D9F40048021B /* Enum */,
+				40DDC78C2629A81700597480 /* Extension */,
+				4002151C2629D8670048021B /* Utility */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		40E7652F2634420900E5D543 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				40E765302634421900E5D543 /* BaseVC.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,6 +566,7 @@
 				40DCDACE262B11D3007ED056 /* ImageLoader.swift in Sources */,
 				40269794262723CA003966B9 /* AppCoordinator.swift in Sources */,
 				4045A5CE2629DB4900C07E74 /* NetworkConstant.swift in Sources */,
+				40E765312634421900E5D543 /* BaseVC.swift in Sources */,
 				40E0D3902629A249000E76FC /* SingerCell.swift in Sources */,
 				40DDC79E2629A83A00597480 /* UIViewController+Rx.swift in Sources */,
 				402697B6262729FE003966B9 /* AppContainer.swift in Sources */,
@@ -556,6 +579,7 @@
 				40DDC7952629A82E00597480 /* Optional+Extension.swift in Sources */,
 				40DDC79D2629A83A00597480 /* UIImageView+isNotHidden.swift in Sources */,
 				4002151E2629D8970048021B /* NetworkManager.swift in Sources */,
+				40E7654126344BB300E5D543 /* SingerCoordinator.swift in Sources */,
 				40CB7802262675BE0053F258 /* SingerVC.swift in Sources */,
 				4045A5F42629E12800C07E74 /* Parser.swift in Sources */,
 				40DDC7942629A82E00597480 /* String+localized.swift in Sources */,
