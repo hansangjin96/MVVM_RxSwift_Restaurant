@@ -60,7 +60,7 @@ private extension SingerVC {
             .disposed(by: disposeBag)
         
         // TODO: ObservableType만 bind 가능한 지 다시 찾아보기
-        tableView.rx.modelDeleted(Itunes.self)
+        tableView.rx.modelSelected(Itunes.self)
             .bind(to: viewModel.cellClickEvent)
             .disposed(by: disposeBag)
     }

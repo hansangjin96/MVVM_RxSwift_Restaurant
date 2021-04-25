@@ -25,6 +25,8 @@ final class SingerCoordinator: SingerCoordinatorType {
     }
     
     func toDetail(with model: Itunes) {
-        print("toDetail \(model)")
+        let vc = AppContainer.shared.getSingerDetailVC(with: model)
+        
+        navi.pushViewController(vc, animated: true)
     }
 }

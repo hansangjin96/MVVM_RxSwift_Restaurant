@@ -11,14 +11,27 @@ class AppContainer {
     static let shared: AppContainer = .init()
     private init () {}
     
+    private enum Storyboard: String {
+        case Singer
+        case SingerDetail
+    }
+    
     var serviceProvider: ServiceProviderType {
         return ServiceProvider()
     }
     
     func getSingerVC(coordinator: SingerCoordinatorType) -> SingerVC {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let vc = storyboard.instantiateInitialViewController() as! SingerVC
+        let storyboard = UIStoryboard(name: Storyboard.Singer.rawValue, bundle: .main)
+        let vc = storyboard.instantiateViewController(identifier: SingerVC.reusableID) as! SingerVC
         vc.viewModel = SingerVM(provider: serviceProvider, coordinator: coordinator)
+        return vc
+    }
+    
+    func getSingerDetailVC(with model: Itunes) -> SingerDetailVC {
+        let storyboard = UIStoryboard(name: Storyboard.SingerDetail.rawValue, bundle: .main)
+        let vc = storyboard.instantiateViewController(identifier: SingerDetailVC.reusableID) as! SingerDetailVC
+        
+        vc.model = model
         return vc
     }
 }
