@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Oab-Ey-scD">
-                                <rect key="frame" x="20" y="94" width="374" height="576.5"/>
+                                <rect key="frame" x="20" y="64" width="374" height="576.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PDa-Ox-KME">
                                         <rect key="frame" x="11" y="0.0" width="352" height="352"/>
@@ -58,6 +58,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o61-af-2Oy">
                                                 <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="tintColor" systemColor="systemIndigoColor"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="backward.fill" catalog="system" symbolScale="large"/>
                                                 </state>
@@ -65,13 +66,18 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laO-KC-xOs">
                                                 <rect key="frame" x="81" y="0.0" width="18.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="tintColor" systemColor="systemIndigoColor"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <imageReference key="image" image="pause.fill" catalog="system" symbolScale="large"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hH5-h9-DHp">
                                                 <rect key="frame" x="149.5" y="0.0" width="31" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="tintColor" systemColor="systemIndigoColor"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="forward.fill" catalog="system" symbolScale="large"/>
                                                 </state>
@@ -91,7 +97,7 @@
                         <constraints>
                             <constraint firstItem="PDa-Ox-KME" firstAttribute="width" secondItem="r9c-lx-iFK" secondAttribute="width" multiplier="0.85" id="FXA-e3-YpO"/>
                             <constraint firstItem="6x0-Vl-tCi" firstAttribute="trailing" secondItem="Oab-Ey-scD" secondAttribute="trailing" constant="20" id="Js9-hh-x6x"/>
-                            <constraint firstItem="Oab-Ey-scD" firstAttribute="top" secondItem="6x0-Vl-tCi" secondAttribute="top" constant="50" id="R8J-su-2Vv"/>
+                            <constraint firstItem="Oab-Ey-scD" firstAttribute="top" secondItem="6x0-Vl-tCi" secondAttribute="top" constant="20" id="R8J-su-2Vv"/>
                             <constraint firstItem="Oab-Ey-scD" firstAttribute="leading" secondItem="6x0-Vl-tCi" secondAttribute="leading" constant="20" id="aQp-Tm-tNh"/>
                         </constraints>
                     </view>
@@ -110,6 +116,7 @@
     <resources>
         <image name="backward.fill" catalog="system" width="128" height="79"/>
         <image name="forward.fill" catalog="system" width="128" height="79"/>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

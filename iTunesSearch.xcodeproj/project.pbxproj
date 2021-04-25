@@ -29,6 +29,7 @@
 		4045DFFA2629EE660021E9C6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4045DFF92629EE660021E9C6 /* RxCocoa */; };
 		4045DFFC2629EE660021E9C6 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 4045DFFB2629EE660021E9C6 /* RxBlocking */; };
 		404BAAC7262A7DDD007F8D24 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404BAAC6262A7DDD007F8D24 /* ImageCache.swift */; };
+		408BBA0726355F42000B573C /* SingerDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408BBA0626355F42000B573C /* SingerDetailVM.swift */; };
 		40CB77FE262675BE0053F258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB77FD262675BE0053F258 /* AppDelegate.swift */; };
 		40CB7800262675BE0053F258 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB77FF262675BE0053F258 /* SceneDelegate.swift */; };
 		40CB7802262675BE0053F258 /* SingerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB7801262675BE0053F258 /* SingerVC.swift */; };
@@ -88,6 +89,7 @@
 		4045A5F32629E12800C07E74 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		4045A5FB2629E20D00C07E74 /* ResultBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBase.swift; sourceTree = "<group>"; };
 		404BAAC6262A7DDD007F8D24 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		408BBA0626355F42000B573C /* SingerDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerDetailVM.swift; sourceTree = "<group>"; };
 		40CB77FA262675BE0053F258 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40CB77FD262675BE0053F258 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40CB77FF262675BE0053F258 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -233,13 +235,8 @@
 		402697A5262727EC003966B9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				40CB7803262675BE0053F258 /* Singer.storyboard */,
-				40CB7801262675BE0053F258 /* SingerVC.swift */,
-				402697A626272803003966B9 /* SingerVM.swift */,
-				40E0D38F2629A249000E76FC /* SingerCell.xib */,
-				40E0D38E2629A249000E76FC /* SingerCell.swift */,
-				40E7655C2634609300E5D543 /* SingerDetail.storyboard */,
-				40E7654E26345E4200E5D543 /* SingerDetailVC.swift */,
+				40C76D4126355B0A005324EA /* Singer */,
+				40C76D4226355B16005324EA /* SingerDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -293,6 +290,28 @@
 				40DCDACD262B11D3007ED056 /* ImageLoader.swift */,
 			);
 			path = Cache;
+			sourceTree = "<group>";
+		};
+		40C76D4126355B0A005324EA /* Singer */ = {
+			isa = PBXGroup;
+			children = (
+				40CB7803262675BE0053F258 /* Singer.storyboard */,
+				40CB7801262675BE0053F258 /* SingerVC.swift */,
+				402697A626272803003966B9 /* SingerVM.swift */,
+				40E0D38F2629A249000E76FC /* SingerCell.xib */,
+				40E0D38E2629A249000E76FC /* SingerCell.swift */,
+			);
+			path = Singer;
+			sourceTree = "<group>";
+		};
+		40C76D4226355B16005324EA /* SingerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				40E7655C2634609300E5D543 /* SingerDetail.storyboard */,
+				40E7654E26345E4200E5D543 /* SingerDetailVC.swift */,
+				408BBA0626355F42000B573C /* SingerDetailVM.swift */,
+			);
+			path = SingerDetail;
 			sourceTree = "<group>";
 		};
 		40CB77F1262675BE0053F258 = {
@@ -581,6 +600,7 @@
 				4045A5D72629E01700C07E74 /* EndpointType.swift in Sources */,
 				402697A726272803003966B9 /* SingerVM.swift in Sources */,
 				40DDC79C2629A83A00597480 /* Observable+Extensions.swift in Sources */,
+				408BBA0726355F42000B573C /* SingerDetailVM.swift in Sources */,
 				404BAAC7262A7DDD007F8D24 /* ImageCache.swift in Sources */,
 				402697BB26272A0F003966B9 /* ServiceProvider.swift in Sources */,
 				40DDC7952629A82E00597480 /* Optional+Extension.swift in Sources */,

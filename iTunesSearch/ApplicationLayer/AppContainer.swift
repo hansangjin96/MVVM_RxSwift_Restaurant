@@ -27,11 +27,18 @@ class AppContainer {
         return vc
     }
     
-    func getSingerDetailVC(with model: Itunes) -> SingerDetailVC {
+    func getSingerDetailVC(
+        with model: Itunes,
+        coordinator: SingerCoordinatorType
+    ) -> SingerDetailVC {
         let storyboard = UIStoryboard(name: Storyboard.SingerDetail.rawValue, bundle: .main)
         let vc = storyboard.instantiateViewController(identifier: SingerDetailVC.reusableID) as! SingerDetailVC
-        
-        vc.model = model
+        let vm = SingerDetailVM(
+            with: model,
+            provider: serviceProvider,
+            coordinator: coordinator
+        )
+        vc.viewModel = vm
         return vc
     }
 }

@@ -43,6 +43,6 @@ final class SingerCell: UITableViewCell {
         }
         
         singerName.text = item.artistName
-        songName.text = item.kind
+        songName.text = item.trackName
     }
 }

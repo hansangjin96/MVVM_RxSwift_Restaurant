@@ -16,6 +16,26 @@ class BaseVC<VM: ViewModelType>: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        viewModel.transform(<#T##input: VM.Input##VM.Input#>)
+        
+        bindViewModel()
+        setupUI()
+    }
+    
+    func bindViewModel() {
+        viewModel.start()
+        eventBind()
+        stateBind()
+    }
+    
+    func eventBind() {
+        // no - op
+    }
+    
+    func stateBind() {
+        // no - op
+    }
+    
+    func setupUI() {
+        // no - op
     }
 }

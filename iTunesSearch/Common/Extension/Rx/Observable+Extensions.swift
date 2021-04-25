@@ -21,3 +21,13 @@ extension ObservableType {
         }
     }
 }
+
+extension PrimitiveSequence {
+    func asDriverOnErrorJustComplete() -> Driver<Element> {
+        return asDriver { error in
+            Logger.info(error)
+            
+            return Driver.empty()
+        }
+    }
+}

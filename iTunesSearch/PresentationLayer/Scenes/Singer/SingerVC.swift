@@ -35,24 +35,12 @@ final class SingerVC: BaseVC<SingerVM> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        bindViewModel()
-        setupUI()
     }
-}
 
-// MARK: Bind
-
-private extension SingerVC {
-    func bindViewModel() {
-        viewModel.start()
-        eventBind()
-        stateBind()
-    }
+    // MARK: Bind
     
-    func eventBind() { 
+    override func eventBind() { 
         searchController.searchBar.rx.searchButtonClicked
-            .debug()
             .map { [unowned self] _ -> String in
                 return self.searchController.searchBar.text ?? "" 
             }
@@ -65,7 +53,7 @@ private extension SingerVC {
             .disposed(by: disposeBag)
     }
     
-    func stateBind() {
+    override func stateBind() {
         
         viewModel.searchResultRelay
             .asDriver()
@@ -93,16 +81,19 @@ private extension SingerVC {
             })
             .disposed(by: disposeBag)
     }
-}
-
-// MARK: UI
-
-private extension SingerVC {
-    func setupUI() {
+    
+    // MARK: UI
+    
+    override func setupUI() {
         configureNavi()
         configureTableView()
     }
-    
+}
+
+// MARK: Methods
+
+private extension SingerVC {
+
     func configureNavi() {
         navigationItem.title = Text.title
         navigationController?.navigationBar.prefersLargeTitles = true

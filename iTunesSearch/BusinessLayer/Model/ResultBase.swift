@@ -13,7 +13,8 @@ struct ResultBase: Decodable {
 }
 
 struct Itunes: Decodable {
+    let trackName: String?
+    let previewUrl: String?
     let artistName: String?
-    let kind: String?
     let artworkUrl100: String?
 }
