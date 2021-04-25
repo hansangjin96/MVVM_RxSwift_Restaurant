@@ -34,4 +34,4 @@
 
 ### **SPM**
 
-- RxSwift
+- RxSwift 6.1.0
