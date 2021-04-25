@@ -2,12 +2,14 @@
 
 [RxSwift 기초 스터디](https://www.notion.so/RxSwift-213ed9b3dab846cab19ff96c1afe21a4)에서 개인이 Develop하는 프로젝트 입니다.
 
+### API
+
+- [https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1)
+
 ### **공통 구현 사항**
 
 - 테이블 뷰 + 디테일 뷰 구성
-- 테이블 구현 + (iTunes 음악 검색 기능 구현)
-- API 참고 문서: 
-  [https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1)
+- 테이블 구현 + (iTunes 음악 검색 기능 구현)  
 
 ### **개별 구현**
 
