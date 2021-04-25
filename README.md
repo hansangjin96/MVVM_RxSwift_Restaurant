@@ -4,12 +4,12 @@
 
 ### API
 
-- [https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1)
+- [iTunes API](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1)
 
 ### **공통 구현 사항**
 
 - 테이블 뷰 + 디테일 뷰 구성
-- 테이블 구현 + (iTunes 음악 검색 기능 구현)  
+- 테이블 구현 + (iTunes 음악 검색 기능 구현)
 
 ### **개별 구현**
 
