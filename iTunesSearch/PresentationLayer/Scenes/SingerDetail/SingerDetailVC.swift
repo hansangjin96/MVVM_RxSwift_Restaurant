@@ -72,6 +72,8 @@ final class SingerDetailVC: BaseVC<SingerDetailVM> {
     }
 }
 
+// MARK: Methods
+
 private extension SingerDetailVC {
     func togglePlayState() {
         if playButton.isSelected {
