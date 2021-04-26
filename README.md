@@ -18,6 +18,9 @@
 - 디테일 뷰 구성은 자유롭게
 - 1분 미리 듣기 추가 (AVFoundation, AVKit)
 - 검색 히스토리 추가 (CoreData)
+- Git Projects, Issues 사용하기
+- Jira와 연동하기
+- Confluence 사용하기
 
 ### **사용 스택**
 
@@ -27,7 +30,12 @@
 - Cache
 - AVFoundation
 - CoreData
-- Git: Project, Issue
+
+### **Communication**
+
+- Git Project, Issue
+- Jira
+- Confluence
 
 ### **Requirements**
 
