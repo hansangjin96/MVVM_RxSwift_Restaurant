@@ -27,7 +27,6 @@
 - URLSession
 - Cache
 - AVFoundation
-- CoreData
 
 ### **Communication**
 
