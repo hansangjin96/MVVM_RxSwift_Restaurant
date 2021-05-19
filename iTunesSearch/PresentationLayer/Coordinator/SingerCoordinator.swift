@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SingerCoordinatorType: CoordinatorType {
-    func toDetail(with model: Itunes)
+    func toDetail(with model: MusicInfo)
 }
 
 final class SingerCoordinator: SingerCoordinatorType {
@@ -24,7 +24,7 @@ final class SingerCoordinator: SingerCoordinatorType {
         navi.setViewControllers([vc], animated: true)
     }
     
-    func toDetail(with model: Itunes) {
+    func toDetail(with model: MusicInfo) {
         let vc = AppContainer.shared.getSingerDetailVC(
             with: model,
             coordinator: self

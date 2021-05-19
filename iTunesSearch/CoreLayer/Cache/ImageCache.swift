@@ -9,7 +9,7 @@ import Foundation
 import UIKit.UIImage
 
 /// Memory Cache 구현
-protocol ImageCacheType: class {
+protocol ImageCacheType: AnyObject {
     // url에 대한 image 반환
     func image(for url: URL) -> UIImage?
     

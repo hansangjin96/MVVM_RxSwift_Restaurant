@@ -28,7 +28,7 @@ class AppContainer {
     }
     
     func getSingerDetailVC(
-        with model: Itunes,
+        with model: MusicInfo,
         coordinator: SingerCoordinatorType
     ) -> SingerDetailVC {
         let storyboard = UIStoryboard(name: Storyboard.SingerDetail.rawValue, bundle: .main)

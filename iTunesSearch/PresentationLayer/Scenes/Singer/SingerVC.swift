@@ -47,8 +47,8 @@ final class SingerVC: BaseVC<SingerVM> {
             .bind(to: viewModel.queryRelay)
             .disposed(by: disposeBag)
         
-        // TODO: ObservableType만 bind 가능한 지 다시 찾아보기
-        tableView.rx.modelSelected(Itunes.self)
+        tableView.rx.itemSelected
+            .withLatestFrom(viewModel.searchResultRelay) { ($0, $1) }
             .bind(to: viewModel.cellClickEvent)
             .disposed(by: disposeBag)
     }
@@ -77,7 +77,7 @@ final class SingerVC: BaseVC<SingerVM> {
             .asDriverOnErrorJustComplete()
             .drive(onNext: {
                 Logger.info($0)
-                // ErrorHandler
+                // TODO: ErrorHandler
             })
             .disposed(by: disposeBag)
     }

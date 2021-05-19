@@ -14,7 +14,7 @@ final class SingerVM: ViewModelType {
     
     // MARK: Action
     
-    let cellClickEvent: PublishRelay<Itunes> = .init()
+    let cellClickEvent: PublishRelay<(IndexPath, [Itunes])> = .init()
     let queryRelay: PublishRelay<String> = .init()
     
     // MARK: State
@@ -77,7 +77,7 @@ private extension SingerVM {
         cellClickEvent
             .asDriverOnErrorJustComplete()
             .drive(onNext: { [weak self] in
-                self?.coordinator.toDetail(with: $0)
+                self?.coordinator.toDetail(with: MusicInfo(index: $0, musics: $1))
             })
             .disposed(by: disposeBag)
     }
