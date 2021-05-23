@@ -42,3 +42,7 @@
 ### **SPM**
 
 - RxSwift 6.1.0
+
+### **License**
+
+- MIT License
