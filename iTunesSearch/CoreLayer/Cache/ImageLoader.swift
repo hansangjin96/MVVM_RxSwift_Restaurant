@@ -50,11 +50,9 @@ final class ImageLoader {
                     single(.success(image))
                     
                     return Disposables.create()
-                } else {
-                    single(.failure(CacheError.noCachcedImage))
-                    
-                    return Disposables.create()
                 }
+                
+                break
             case .disk, .none:
                 break
             }

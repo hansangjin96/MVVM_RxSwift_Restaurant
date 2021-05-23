@@ -31,6 +31,7 @@ final class SingerCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
+        singerImage.image = .none
         disposeBag = .init()
     }
     
