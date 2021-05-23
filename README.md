@@ -19,7 +19,6 @@
 - 셀에서 앨범 이미지, 가수 이름, 노래 제목을 보여주기
 - 디테일 뷰 구성은 자유롭게
 - 1분 미리 듣기 추가 (AVFoundation, AVKit)
-- 검색 히스토리 추가 (CoreData)
 - Git Projects, Issues 사용하기
 
 ### **사용 스택**
