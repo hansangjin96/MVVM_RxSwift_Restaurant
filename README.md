@@ -4,7 +4,7 @@
 
 ### 구현
 
-<center><img src="https://github.com/hansangjin96/RxFlow_ReactorKit/blob/main/%ED%99%94%EB%A9%B4-%EA%B8%B0%EB%A1%9D-2021-04-14-%EC%98%A4%ED%9B%84-12.47.58.gif" width="50%" height="50%"></center>
+<center><img src="https://github.com/hansangjin96/iTunesSearch/blob/main/%ED%99%94%EB%A9%B4%20%EA%B8%B0%EB%A1%9D%202021-05-23%20%EC%98%A4%ED%9B%84%206.48.03.gif" width="50%" height="50%"></center>
 
 ### API
 
