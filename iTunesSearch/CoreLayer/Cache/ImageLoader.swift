@@ -9,6 +9,12 @@ import Foundation
 import UIKit.UIImage
 import RxSwift
 
+enum CacheError: Error {
+    case noCachcedImage
+    case cacheNetworkError
+    case cacheNetworkRespondeDataError
+}
+
 enum CacheType {
     case none
     case memory
@@ -44,7 +50,11 @@ final class ImageLoader {
                     single(.success(image))
                     
                     return Disposables.create()
-                }    
+                } else {
+                    single(.failure(CacheError.noCachcedImage))
+                    
+                    return Disposables.create()
+                }
             case .disk, .none:
                 break
             }
@@ -52,10 +62,17 @@ final class ImageLoader {
             let session: URLSession = URLSession(configuration: .ephemeral)
             
             let task: URLSessionTask = session.dataTask(with: url) { [weak self] data, response, error in
+                guard error.isNone else { 
+                    single(.failure(CacheError.cacheNetworkError)) 
+                    return
+                }
+                
                 guard let responseData = data,
-                      let image = UIImage(data: responseData),
-                      error.isNone 
-                else { return }
+                      let image = UIImage(data: responseData)
+                else { 
+                    single(.failure(CacheError.cacheNetworkRespondeDataError))
+                    return
+                }
                 
                 self?.cache[url] = image
                 
@@ -66,7 +83,7 @@ final class ImageLoader {
             
             return Disposables.create {
                 task.cancel()
-                session.invalidateAndCancel() // session = nil?
+                session.invalidateAndCancel()
             }
         }
         
