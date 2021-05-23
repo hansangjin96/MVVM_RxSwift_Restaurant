@@ -142,6 +142,7 @@ private extension SingerDetailVM {
                 let time = player.currentTime()
                 let currentTime = CMTimeGetSeconds(time).rounded()
                 
+                // business logic에 대한 부분은 해당 프로젝트의 큰 고려사항이 아니라 하드 코딩
                 if currentTime.isZero || currentTime.isNaN {
                     return "00:00"
                 }
