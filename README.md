@@ -4,6 +4,10 @@
 
 <center><img src="https://github.com/hansangjin96/iTunesSearch/blob/main/%ED%99%94%EB%A9%B4%20%EA%B8%B0%EB%A1%9D%202021-05-23%20%EC%98%A4%ED%9B%84%206.48.03.gif" width="40%" height="40%"></center>
 
+### 구현 목적
+
+[Rxswift 기초 스터디](https://www.notion.so/RxSwift-213ed9b3dab846cab19ff96c1afe21a4)를 진행하며 배운 개념을 실제 프로젝트에 적용해본다.
+
 ### API
 
 - [iTunes API](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1)
